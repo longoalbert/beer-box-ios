@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rfD-8t-Czu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rfD-8t-Czu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -155,70 +156,109 @@
             <point key="canvasLocation" x="1047.8260869565217" y="134.59821428571428"/>
         </scene>
         <!--Detail View Controller-->
-        <scene sceneID="sYU-R9-AKX">
+        <scene sceneID="0dN-Jc-HHo">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="X4d-yH-EVB" customClass="DetailViewController" customModule="BeerBox" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZyA-ka-45z">
+                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="91k-8z-T0X" customClass="DetailViewController" customModule="BeerBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VCD-WM-i5X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vcy-qa-A44">
-                                <rect key="frame" x="32" y="108" width="80" height="690"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="pcK-6c-Foo"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="eR3-g1-ZNS">
-                                <rect key="frame" x="144" y="108" width="238" height="690"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Jp-TO-Qtz">
+                                <rect key="frame" x="0.0" y="493" width="414" height="403"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="T5Y-ET-iGV">
-                                        <rect key="frame" x="0.0" y="0.0" width="98.5" height="45.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3E3-kc-fbD">
+                                        <rect key="frame" x="40" y="32" width="80" height="339"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="fgC-ZX-ahL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Agk-SA-6lt">
+                                        <rect key="frame" x="152" y="32" width="246" height="339"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beer name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vh-cO-x83" userLabel="Beer name label">
-                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beer name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG7-zu-xXV" userLabel="Beer name label">
+                                                <rect key="frame" x="0.0" y="0.0" width="246" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beer type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dQ-4z-SIE" userLabel="Beer type label">
-                                                <rect key="frame" x="0.0" y="26" width="69.5" height="19.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beer type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3k-IF-DGz" userLabel="Beer type label">
+                                                <rect key="frame" x="0.0" y="28" width="246" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beer description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXF-Ta-wgD" userLabel="Beer description label">
+                                                <rect key="frame" x="0.0" y="59.5" width="246" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beer description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EF5-f5-B4F" userLabel="Beer description label">
-                                        <rect key="frame" x="0.0" y="673" width="105" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="KXF-Ta-wgD" secondAttribute="trailing" id="5fL-2m-wZe"/>
+                                            <constraint firstItem="aG7-zu-xXV" firstAttribute="top" secondItem="Agk-SA-6lt" secondAttribute="top" id="6mP-hk-K9t"/>
+                                            <constraint firstItem="W3k-IF-DGz" firstAttribute="leading" secondItem="Agk-SA-6lt" secondAttribute="leading" id="9lC-PY-qxr"/>
+                                            <constraint firstAttribute="trailing" secondItem="aG7-zu-xXV" secondAttribute="trailing" id="AVD-6p-Wbg"/>
+                                            <constraint firstItem="KXF-Ta-wgD" firstAttribute="leading" secondItem="Agk-SA-6lt" secondAttribute="leading" id="aB5-MU-xJf"/>
+                                            <constraint firstItem="aG7-zu-xXV" firstAttribute="leading" secondItem="Agk-SA-6lt" secondAttribute="leading" id="dnZ-AZ-VVb"/>
+                                            <constraint firstAttribute="trailing" secondItem="W3k-IF-DGz" secondAttribute="trailing" id="nSm-Te-UNg"/>
+                                            <constraint firstItem="W3k-IF-DGz" firstAttribute="top" secondItem="aG7-zu-xXV" secondAttribute="bottom" constant="4" id="rua-WN-4VP"/>
+                                            <constraint firstItem="KXF-Ta-wgD" firstAttribute="top" secondItem="W3k-IF-DGz" secondAttribute="bottom" constant="12" id="vPr-4X-geX"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" name="Aztec"/>
+                                <constraints>
+                                    <constraint firstItem="Agk-SA-6lt" firstAttribute="leading" secondItem="3E3-kc-fbD" secondAttribute="trailing" constant="32" id="2gh-eY-RNa"/>
+                                    <constraint firstItem="3E3-kc-fbD" firstAttribute="top" secondItem="5Jp-TO-Qtz" secondAttribute="top" constant="32" id="A34-fC-6lE"/>
+                                    <constraint firstItem="3E3-kc-fbD" firstAttribute="centerY" secondItem="5Jp-TO-Qtz" secondAttribute="centerY" id="OE5-8R-bUh"/>
+                                    <constraint firstAttribute="bottom" secondItem="3E3-kc-fbD" secondAttribute="bottom" constant="32" id="TqQ-3L-34S"/>
+                                    <constraint firstItem="Agk-SA-6lt" firstAttribute="top" secondItem="5Jp-TO-Qtz" secondAttribute="top" constant="32" id="ddl-Qm-LNK"/>
+                                    <constraint firstAttribute="bottom" secondItem="Agk-SA-6lt" secondAttribute="bottom" constant="32" id="vPd-v8-qQS"/>
+                                    <constraint firstItem="3E3-kc-fbD" firstAttribute="leading" secondItem="5Jp-TO-Qtz" secondAttribute="leadingMargin" constant="32" id="wVy-Cx-fed"/>
+                                    <constraint firstAttribute="trailing" secondItem="Agk-SA-6lt" secondAttribute="trailing" constant="16" id="wnz-mg-EOV"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9x-Op-eyE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="449"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Lxt-v6-lU1" appends="YES" id="2F8-Q8-PoY"/>
+                                </connections>
+                            </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="KBu-UY-Y8v"/>
-                        <color key="backgroundColor" name="Aztec"/>
+                        <viewLayoutGuide key="safeArea" id="fIc-D4-iHm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KBu-UY-Y8v" firstAttribute="bottom" secondItem="vcy-qa-A44" secondAttribute="bottom" constant="64" id="4hf-uW-Qsx"/>
-                            <constraint firstItem="KBu-UY-Y8v" firstAttribute="bottom" secondItem="eR3-g1-ZNS" secondAttribute="bottom" constant="64" id="NV8-DZ-xOo"/>
-                            <constraint firstItem="vcy-qa-A44" firstAttribute="top" secondItem="KBu-UY-Y8v" secondAttribute="top" constant="64" id="PQF-rX-Mkk"/>
-                            <constraint firstItem="KBu-UY-Y8v" firstAttribute="trailing" secondItem="eR3-g1-ZNS" secondAttribute="trailing" constant="32" id="tws-hC-8tK"/>
-                            <constraint firstItem="eR3-g1-ZNS" firstAttribute="top" secondItem="KBu-UY-Y8v" secondAttribute="top" constant="64" id="vGU-vT-V44"/>
-                            <constraint firstItem="vcy-qa-A44" firstAttribute="leading" secondItem="KBu-UY-Y8v" secondAttribute="leading" constant="32" id="ymC-cU-qqJ"/>
-                            <constraint firstItem="eR3-g1-ZNS" firstAttribute="leading" secondItem="vcy-qa-A44" secondAttribute="trailing" constant="32" id="zsB-I1-brT"/>
+                            <constraint firstItem="5Jp-TO-Qtz" firstAttribute="height" secondItem="VCD-WM-i5X" secondAttribute="height" multiplier="0.45" id="ELs-BA-4ju"/>
+                            <constraint firstItem="M9x-Op-eyE" firstAttribute="top" secondItem="fIc-D4-iHm" secondAttribute="top" id="FUw-fz-CD2"/>
+                            <constraint firstItem="5Jp-TO-Qtz" firstAttribute="leading" secondItem="fIc-D4-iHm" secondAttribute="leading" id="OfQ-bK-C56"/>
+                            <constraint firstAttribute="bottom" secondItem="5Jp-TO-Qtz" secondAttribute="bottom" id="ROf-tS-sbB"/>
+                            <constraint firstItem="5Jp-TO-Qtz" firstAttribute="top" secondItem="M9x-Op-eyE" secondAttribute="bottom" id="SNY-JY-JD0"/>
+                            <constraint firstItem="5Jp-TO-Qtz" firstAttribute="trailing" secondItem="fIc-D4-iHm" secondAttribute="trailing" id="puF-i3-qbw"/>
+                            <constraint firstItem="fIc-D4-iHm" firstAttribute="trailing" secondItem="M9x-Op-eyE" secondAttribute="trailing" id="r1N-fu-0MZ"/>
+                            <constraint firstItem="M9x-Op-eyE" firstAttribute="leading" secondItem="fIc-D4-iHm" secondAttribute="leading" id="yPU-cC-1gB"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="beerDescriptionLabel" destination="EF5-f5-B4F" id="jRh-ff-xoc"/>
-                        <outlet property="beerImageView" destination="vcy-qa-A44" id="OvE-DW-M89"/>
-                        <outlet property="beerNameLabel" destination="0vh-cO-x83" id="dYP-4v-ahM"/>
-                        <outlet property="beerTypeLabel" destination="7dQ-4z-SIE" id="3FF-M1-eAD"/>
+                        <outlet property="beerDescriptionLabel" destination="KXF-Ta-wgD" id="yBF-kF-zpT"/>
+                        <outlet property="beerImageView" destination="3E3-kc-fbD" id="AUv-lg-Flk"/>
+                        <outlet property="beerNameLabel" destination="aG7-zu-xXV" id="qmZ-Mt-gfT"/>
+                        <outlet property="beerTypeLabel" destination="W3k-IF-DGz" id="SSH-2F-2uE"/>
+                        <outlet property="contentView" destination="5Jp-TO-Qtz" id="Qpt-N5-S4P"/>
+                        <outlet property="contentViewBottomConstraint" destination="ROf-tS-sbB" id="Dbb-MR-247"/>
+                        <outlet property="contentViewHeight" destination="ELs-BA-4ju" id="Kg3-eT-dFe"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2wk-3O-FGe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9s-sp-heH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Lxt-v6-lU1">
+                    <connections>
+                        <action selector="topViewTap:" destination="91k-8z-T0X" id="mSQ-HP-Naw"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1932" y="135"/>
+            <point key="canvasLocation" x="1981" y="135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pO0-B4-rXX">
@@ -251,5 +291,8 @@
         <namedColor name="Sea Buckthorn">
             <color red="0.9882352941176471" green="0.68627450980392157" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

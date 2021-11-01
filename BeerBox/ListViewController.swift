@@ -73,7 +73,7 @@ class ListViewController: UIViewController {
         ]
         
         AF.request("https://api.punkapi.com/v2/beers", parameters: params, encoding: URLEncoding.queryString).responseDecodable(of: [BeerDTO].self, decoder: decoder) { [weak self] response in
-            debugPrint(response)
+            
             guard let beers = response.value else { return }
             
             self?.currentPage += 1
@@ -144,18 +144,10 @@ extension ListViewController: UITableViewDelegate {
         }
         
         viewController.beer = beer
+        viewController.modalPresentationStyle = .overFullScreen
+        viewController.modalTransitionStyle = .crossDissolve
         
-        if #available(iOS 15.0, *) {
-            if let presentationController = viewController.presentationController as? UISheetPresentationController {
-                presentationController.detents = [.medium()]
-            }
-        }
-        else {
-            viewController.modalPresentationStyle = .custom
-            viewController.transitioningDelegate = self
-        }
-        
-        present(viewController, animated: true)
+        present(viewController, animated: false)
     }
     
 }
@@ -163,7 +155,7 @@ extension ListViewController: UITableViewDelegate {
 extension ListViewController: UITableViewDataSourcePrefetching {
     
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        print(indexPaths.last?.row)
+        
     }
     
 }
@@ -175,19 +167,4 @@ extension ListViewController: UISearchResultsUpdating {
         filterContentFor(searchText: searchBar.text!)
     }
 
-}
-
-extension ListViewController: UIViewControllerTransitioningDelegate {
-    
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return HalfSizePresentationController(presentedViewController: presented, presenting: presentingViewController)
-    }
-    
-}
-
-class HalfSizePresentationController: UIPresentationController {
-    override var frameOfPresentedViewInContainerView: CGRect {
-        guard let bounds = containerView?.bounds else { return .zero }
-        return CGRect(x: 0, y: bounds.height / 2, width: bounds.width, height: bounds.height / 2)
-    }
 }
